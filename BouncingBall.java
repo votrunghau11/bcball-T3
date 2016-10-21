@@ -10,7 +10,8 @@ import java.awt.image.BufferedImage;
 import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -61,6 +62,23 @@ public class BouncingBall extends JFrame {
 			}
 		});
 
+		this.addKeyListener(new KeyAdapter() {
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode() == KeyEvent.VK_UP){
+					rightPaddleY -= 10;
+				}else if(e.getKeyCode() == KeyEvent.VK_DOWN){
+					rightPaddleY += 10;
+				}else if(e.getKeyCode() == KeyEvent.VK_W){
+					leftPaddleY -= 10;
+				}else if(e.getKeyCode()== KeyEvent.VK_S){
+					leftPaddleY += 10;
+				}
+			}
+			
+		});
+		
 		ActionListener updateTask = new ActionListener() {
 
 			@Override
@@ -79,8 +97,8 @@ public class BouncingBall extends JFrame {
 					changeBallColor();
 				}
 				//Set fixed paddles position
-				leftPaddleY = (getHeight()-40)/2 - leftPaddleHeight/2;
-				rightPaddleY = (getHeight()-40)/2 - rightPaddleHeight/2;
+				//leftPaddleY = (getHeight()-40)/2 - leftPaddleHeight/2;
+				//rightPaddleY = (getHeight()-40)/2 - rightPaddleHeight/2;
 				repaint();
 			}
 		};
