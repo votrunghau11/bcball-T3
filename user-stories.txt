@@ -1,0 +1,11 @@
+User story 1: As a user, I want the shape of the pointer trail is a circle.
+
+User story 2: As a user, I want the size of the ball is 30px so that I can see it in a small window.
+
+User story 3: As a user, I want the color of the background is light blue.
+
+User story 4: As a player, I want to see how many times the ball hit left and right wall
+
+User story 5: As players, we want to control two paddles up and down using keyboard.
+
+User story 6: As a player, I want the left paddle is blue and right paddle is red.
