@@ -93,7 +93,7 @@ int RC =0;
 					xSpeed = -xSpeed;
 					changeBallColor();
 if(x<0){LC++;}
-if(x>WIDTH -size){RC++}
+if(x>WIDTH -size){RC++;}
 				}
 				//Reverse the direction of the ball if it hits the top or bottom wall
 				if (y < 0 || y > HEIGHT - size) {
